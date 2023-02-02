@@ -1,0 +1,17 @@
+{
+  "CloudConfig": {
+    "ProjectID": "--insert-project-id--",
+    "Zone": "europe-west4-a",
+    "Flavor": "t2a-standard-1",
+    "BucketName": "--insert-bucket--name--",
+    "VPC": "default"
+  },
+  "RunConfig": {
+    "Memory": "4G",
+    "Ports": ["80"],
+    "InstanceGroup": "api-instance-group"
+  },
+  "Env": {
+    "SERVER_ADDRESS": "0.0.0.0:80"
+  }
+}
