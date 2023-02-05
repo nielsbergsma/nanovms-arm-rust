@@ -43,7 +43,9 @@ ops image create target/aarch64-unknown-linux-gnu/release/api -c deployment/conf
 ops instance create api-v1 -c deployment/config.json -t gcp 
 ```
 
-The last step targets an instance group, if you wish to deploy just a single instance, and expose it directly with a public ip-address. Remove `RunConfig.InstanceGroup` property from `deployment/config.json` and execute:
+The last step targets an instance group. Alternatively, if you wish to deploy just a single instance, and expose it directly with a public ip-address, do the following: 
+
+Remove `RunConfig.InstanceGroup` property from `deployment/config.json` and execute:
 ```shell
 ops instance create api-v1 -c deployment/config.json p 80 -t gcp
 ```
