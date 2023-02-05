@@ -38,7 +38,7 @@ RUSTFLAGS='-C target-feature=+crt-static' cross build --release --target aarch64
 ops image create target/aarch64-unknown-linux-gnu/release/api -c deployment/config.json -i api-v1 -t gcp
 ```
 
-### Step 3. Create an VM instance on GCP with the image created in step 2.
+### Step 3. Create an VM instance on GCP with that VM image
 ```shell
 ops instance create api-v1 -c deployment/config.json -t gcp 
 ```
